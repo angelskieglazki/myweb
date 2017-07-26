@@ -8,6 +8,7 @@ WORKDIR /root/Projects/web/
 RUN apk add --update \
         lighttpd \
         && rm -rf /var/cache/apk/*
+RUN adduser www-data -G www-data -H -s /bin/false -D
 
 EXPOSE 3000
 
