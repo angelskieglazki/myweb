@@ -1,0 +1,60 @@
+<div ng-controller="downloadCtrl">
+<div class="data_window">
+    <p class="popup__text" style ="font-size: 100%;">
+before download text!!!!
+Default values for url parameters. These can be overridden in actions methods. If a parameter value is a function, it will be called every time a param value needs to be obtained for a request (unless the param was overridden). The function will be passed the current data value as an argument.
+
+Each key value in the parameter object is first bound to url template if present and then any excess keys are appended to the url search query after the ?.
+
+Given a template /path/:verb and parameter {verb:'greet', salutation:'Hello'} results in URL /path/greet?salutation=Hello.
+
+If the parameter value is prefixed with @, then the value for that parameter will be extracted from the corresponding property on the data object (provided when calling a "non-GET" action method). For example, if the defaultParam object is {someParam: '@someProp'} then the value of someParam will be data.someProp. Note that the parameter will be ignored, when calling a "GET" action method (i.e. an action method that does not accept a request body)
+</p>
+</div>
+
+<div class="data_window">
+    <p class="popup__text_center" style ="font-size: 130%;">Select apropriate platform and OS version</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Win32.exe')">Windows 32</button>
+    <p class="popup__text">Download for Windows 32 bit version (arch 86)</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Win64.exe')">Windows 64</button>
+    <p class="popup__text">Download for Windows 64 bit version (arch i64)</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Win32Xp.exe')">Windows 32 XP</button>
+    <p class="popup__text">Download for WindowsXP 32 bit version (arch 86)</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Win64Xp.exe')">Windows 64 XP</button>
+    <p class="popup__text">Download for WindowsXP 64 bit version (arch i64)</p>
+
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Mac32')">Mac OS 32</button>
+    <p class="popup__text">Download for Mac OS 32 bit version (arch 86)</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Mac64')">Mac OS 64</button>
+    <p class="popup__text">Download for Mac OS 64 bit version (arch i64)</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Ubuntu14.04.32')">Ubuntu 14.04</button>
+    <p class="popup__text">Download for Ubuntu 14.04 32 bit version (arch 86)</p>
+</div>
+
+<div class="data_window">
+    <button class="btn3d btn btn_download" ng-click="onDownload('Ubuntu14.04.64')">Ubuntu 14.04</button>
+    <p class="popup__text">Download for Ubuntu 14.04 64 bit version (arch i64)</p>
+</div>
+
+</div>

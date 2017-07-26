@@ -1,0 +1,37 @@
+<div class="data_window">
+    <p class="popup__text" style ="font-size: 100%;">
+
+An rvalue reference is a compound type very similar to C++'s traditional reference. To better distinguish these two types, we refer to a traditional C++ reference as an lvalue reference. When the term reference is used, it refers to both kinds of reference: lvalue reference and rvalue reference.
+
+An lvalue reference is formed by placing an & after some type.
+
+A a; A& a_ref1 = a;  // an lvalue reference
+An rvalue reference is formed by placing an && after some type.
+
+A a; A&& a_ref2 = a;  // an rvalue reference
+An rvalue reference behaves just like an lvalue reference except that it can bind to a temporary (an rvalue), whereas you can not bind a (non const) lvalue reference to an rvalue.
+
+A&  a_ref3 = A();  // Error! 
+A&& a_ref4 = A();  // Ok
+
+    </p>
+</div>
+
+
+<div class="data_window">
+<img src="images/screenshots/1.png" alt="Example 1" style="width:604px;height:428px;">
+<p class="popup__text">Example 1. Pretty module (aka footprint)<br/>
+
+Stack Overflow – сообщество, состоящее из 6.8 миллионов программистов, таких же как и вы, помогающих друг другу. 
+Присоединяйтесь, это не займёт более минуты:
+
+</p>
+</div>
+
+<div class="data_window">
+<img src="images/screenshots/1.png" alt="Example 2" style="width:604px;height:428px;">
+<p class="popup__text">Example 2. Legacy module (aka footprint)<br/>
+My question is: Why does this even come up? Or rather, when would you ever have "a reference to a reference"? How is that any different from a plain old reference? I've never run across this in real-world code, so I'm curious as to what kind of code would need this.
+</p>
+</div>
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+<script src="bower/FileSaver.min.js"></script>
+<script src="bower/chunkload.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/download.js"></script>
+
+<head>
+<meta charset="UTF-8">
+<title>Pretty Viewer</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-controller="mainCtrl">
+	<div>
+		<div>
+			<div class="header">
+				<div class="header-top clearfix">
+					<img src="images/pic/pretty_viewer.png" alt="" class="soft__img pull-left">
+				</div>
+				<div class="header-bot clearfix">
+					<div class="pull-left">
+						<ul class="nav clearfix">
+							<li class="nav__item"><a ng-click='onMain()'>MAIN</a></li>
+							<li class="nav__item"><a href="https://www.blogger.com">BLOG</a></li>
+							<li class="nav__item"><a>DISCOVER<i
+									class="fa fa-angle-down"></i></a>
+								<ul>
+									<li><a ng-click='onScreenshot()'>SCREENSHOTS</a></li>
+									<li><a ng-click='onMadeWithPretty()'>MADE WITH PRETTY
+											VIEWER</a></li>
+								</ul></li>
+							<li class="nav__item"><a>COMMUNITY<i
+									class="fa fa-angle-down"></i></a>
+								<ul>
+									<li><a href="http://www.geda-project.org/">GEDA HOME</a></li>
+									<li><a href="http://kicad-pcb.org/">KICAD HOME</a></li>
+									<li><a
+										href="http://kicad-pcb.org/community/sites/#_forums">KICAD
+											FORUM</a></li>
+								</ul></li>
+							<li class="nav__item"><a ng-click='onDownload()'>DOWNLOAD</a></li>
+							<li class="nav__item"><a>HELP<i class="fa fa-angle-down"></i></a>
+								<ul>
+									<li><a ng-click='onGettingStarted()'>GETTING STARTED</a></li>
+									<li><a ng-click='onDocumentation()'>DOCUMENTATION</a></li>
+									<li><a ng-click='onFileFormats()'>FILE FORMATS</a></li>
+									<li><a ng-click='onSystemRequirement()'>SYSTEM REQUIREMENT</a></li>
+								</ul></li>
+						</ul>
+					</div>
+					<div class="pull-right social">
+						<a href="http://vk.com" class="soc-icon vk"></a> 
+						<a href="http://youtube.com" class="soc-icon youtube"></a>
+						<a href="http://facebook.com" class="soc-icon facebook"></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_MAIN')" class="banner">
+					<img src="images/img/main.jpg" alt="" class="bg__img">
+					<div ng-include src="'./main.html'" class = "main_brd"></div>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_DISC_SCREENSHOT')" class="banner">
+					<img src="images/img/screenshot.jpg" alt="" class="bg__img">
+					<div ng-include src="'./screenshot.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_DISC_MADE_WITH_PRETTY')" class="banner">
+					<img src="images/img/made_with_pretty.jpg" alt="" class="bg__img">
+					<div ng-include src="'./made_with_pretty.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_DOWNLOAD')" class="banner">
+					<img src="images/img/download.jpg" alt="" class="bg__img">
+					<div ng-include src="'./download.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_HELP_GETTING_STARTED')" class="banner">
+					<img src="images/img/help_getting_started.jpg" alt="" class="bg__img">
+					<div ng-include src="'./help_getting_started.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_HELP_DOCUMENTATION')" class="banner">
+					<img src="images/img/help_documentation.jpg" alt="" class="bg__img">
+					<div ng-include src="'./help_documentation.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_HELP_FILE_FORMATS')" class="banner">
+					<img src="images/img/help_file_formats.jpg" alt="" class="bg__img">
+					<div ng-include src="'./help_file_formats.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+			<div class="content-wrap">
+				<div ng-hide="!isState('ST_HELP_SYSTEM_REQUIREMENT')" class="banner">
+					<img src="images/img/help_system_requiriment.jpg" alt="" class="bg__img">
+					<div ng-include src="'./help_system_requiriment.html'" class = "main_brd"></div>
+				</div>
+			</div>
+
+			<div>
+				<div class="content-wrap" class="banner">
+				<div class="data_window" class = "main_brd">
+					<p class="copyright__text">© Copyright 2017. Braiphone.com tel:+7 987 9221234. E-mail:ttt@ttt.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
