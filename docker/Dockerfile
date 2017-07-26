@@ -11,7 +11,6 @@ RUN apk add --update \
 
 RUN adduser www-data -G www-data -H -s /bin/false -D
 
-EXPOSE 80
-VOLUME /var/www
+EXPOSE 3000
 
 ENTRYPOINT ["lighttpd",  "-D",  "-f",  "/etc/lighttpd/lighttpd.conf"]
