@@ -9,8 +9,6 @@ RUN apk add --update \
         lighttpd \
         && rm -rf /var/cache/apk/*
 
-RUN adduser www-data -G www-data -H -s /bin/false -D
-
 EXPOSE 3000
 
 ENTRYPOINT ["lighttpd",  "-D",  "-f",  "/etc/lighttpd/lighttpd.conf"]
