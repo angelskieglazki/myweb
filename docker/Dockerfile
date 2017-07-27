@@ -12,7 +12,7 @@ RUN apk add --update \
         lighttpd \
         && rm -rf /var/cache/apk/*
 
-EXPOSE 3000
+EXPOSE 80
 VOLUME  /root/Project/
 WORKDIR  /root/Project/
 #VOLUME  /var/www/str8ofhears.org/
